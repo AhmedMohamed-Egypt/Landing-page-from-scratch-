@@ -1,0 +1,135 @@
+.ourteam{
+    /*Apply Animation FadeOut wheb page open */
+       @extend %fadeOutSections;
+    &__content--headings{
+        @extend %headings;
+       
+    }
+  
+    &__cards{
+             &.wow{
+        animation-name: wow;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+       animation-fill-mode: both;
+    }
+        >.columns{
+            flex-wrap: wrap;
+            display: flex;
+            @include max(767){
+                flex-direction: column;
+            }
+            >.column{
+                flex-basis: auto;
+                flex-shrink: 0;
+                width: 25%;
+                @include media(768,991){
+                    width: 50%;
+                }
+                @include max(767){
+                    width: 100%;
+                }
+            } 
+        }
+        &--card{
+            position: relative;
+            h3{
+               font-size: 1.4rem;
+                color: #111;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 1.5rem;
+                margin-bottom: .5rem;
+                    font-family: "Roboto Condensed", sans-serif;
+            }
+            >p{
+                color: #aaa;
+                font-size: 1.1rem;
+                display: block;
+                letter-spacing: 2px;
+                font-family: "Roboto Condensed", sans-serif;
+                text-transform: uppercase;
+                   text-align: center;
+                
+            }
+            .image-overlay{
+                position: relative;
+                transition: .5s;
+                img{
+                    display: block;
+                    width: 100%;
+               height: 357px;
+                    &.adjustHeight{
+                        height: auto;
+                    }
+                }
+             &:hover .overlay .overlay__content{
+                    top: 50%;
+                 
+                    
+                }
+                &:hover .overlay{
+                    background-color: rgba(0,0,0,0.6);
+                    
+                }
+                .overlay{
+                    @include overlay;
+                   z-index: 1;
+                    overflow: hidden;
+                     transition: .3s;
+                    &.showOverlay{
+                        background-color: rgba(0,0,0,0.6);
+                    }
+                    &__content{
+                        text-align: center;
+                        @include centerElement;
+                        width: 100%;
+                        color: #aaa;
+                        top: -100px;
+                        transition: .3s;
+                        transition-delay: .05s;
+                        &.showContent{
+                            top: 50%;
+                        }
+                      
+                        i{
+                          color: #aaa; 
+                        }
+                        p{
+                            font-family: 'Volkhov', serif;
+                            font-style: italic;
+                            font-size: 1.4rem;
+                            line-height: 1.8;
+                            width: 200px;
+                            margin: 2rem auto 2rem auto;
+                            @include max(992){
+                                width: 300px;
+                            }
+                            @include max(767){
+                                width: 100%;
+                            }
+                      &::selection {
+                          color: #fff;
+                          background: #000;
+                        }
+                            
+                        }
+                        h4{
+                            font-size: 1.6rem;
+                            letter-spacing: 2px;
+                               &::selection {
+                          color: #fff;
+                          background: #000;
+                        }
+                        }
+                        .social{
+                           @extend %social;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}

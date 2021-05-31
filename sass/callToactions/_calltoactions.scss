@@ -1,0 +1,63 @@
+/*Call To Action Button Learn More In Hero Area */
+
+.heroarea .hero-body a.button.is-primary.is-inverted.is-outlined{
+    
+    padding: 1.5rem 3.7rem;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    background-color: transparent;
+    transition: .3s;
+    &:hover{
+        background: $white;
+        border-color: transparent;
+        color: $black;
+    }
+    &:focus{
+        color: $black;
+        background: $white;
+    border-color: transparent;
+   
+    }
+}
+
+
+
+/*call to action in our works section*/
+
+ .want-see-our-work .content .view-portfolio a{
+    letter-spacing: 2px;
+    background-color: rgba(255,255,255,0.8);
+    color: $black;
+    padding: 1.8rem 5rem ;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: .5s;
+       font-family: 'Roboto Condensed', sans-serif;
+    &:hover{
+        background-color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

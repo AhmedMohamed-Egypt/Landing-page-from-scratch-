@@ -1,0 +1,10 @@
+ .want-see-our-work{
+     /*Apply Animation fadeout when page open */
+         @extend %fadeOutSections;
+     /*Grouping with section subcribe now */
+       @extend %maincontentshort;
+        .content{
+             /*Grouping with section subcribe now */
+            @extend %contentShort;
+        }
+    }

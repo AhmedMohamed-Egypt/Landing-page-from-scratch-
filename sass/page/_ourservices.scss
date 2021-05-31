@@ -1,0 +1,70 @@
+.ourservices{
+    /*Apply Animation fadeout when page open */
+        @extend %fadeOutSections;
+    margin-bottom: 10rem;
+      &.wow{
+        animation-name: wow;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
+       animation-fill-mode: both;
+    }
+    &__content{
+        &--headings{
+            /*Subline text across all page */
+            @extend %headings;
+            h2{
+                padding-bottom: 3rem;
+                
+            }
+        }
+        &--cards{
+            .columns{
+                flex-wrap: wrap;
+                display: flex;
+                @include max(767){
+                    flex-direction: column;
+                }
+                >.column{
+                    flex-basis: auto;
+                    flex-shrink: 0;
+                    width: 25%;
+                    @include media(768,991){
+                        width: 50%;
+                    }
+                    @include max(767){
+                        width: 100%;
+                    }
+                }
+            }
+              &--card{
+                  margin-bottom: 5rem;
+                  @include max(400){
+                      margin-bottom: 2rem;
+                  }
+                  span{
+                      font-size: 48px;
+                  }
+                  h3{
+                      font-size: 1.4rem;
+                      color: $black;
+                      letter-spacing: 2px;
+                      margin: 2rem 0px 1.5rem 0px;
+                  }
+                  p{
+                      font-size: 1.2rem;
+                      color: rgb(102, 102, 102);
+                      
+                      font-family: "Open Sans", sans-serif;
+                      line-height: 1.7;
+                      font-weight: 400;
+                      
+                  }
+                }
+        }
+    }
+}
+hr {
+   background: none;
+  
+    border-top: 1px solid #eaeaea;
+}

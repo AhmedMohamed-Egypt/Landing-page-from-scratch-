@@ -1,0 +1,133 @@
+/*Make Grouping for features parts */
+
+%column-feature{
+      width: 25%;
+    float: left;
+    @include min(1200){
+      margin-top: 5rem;
+    }
+    margin-top: 2rem;
+    @include max(992){
+    width: 50%;
+       
+}
+       @include max(767){
+  float: none;
+ margin: auto;
+           width: 100%;
+}
+}
+
+.features{
+    /*Apply Animation fadeout when page open */
+        @extend %fadeOutSections;
+    &.wow{
+        animation-name: wow;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+       animation-fill-mode: both;
+    }
+
+    &__content{
+        &--headings{
+          @extend %headings;
+        }
+        
+        &--promo{
+            >.columns{
+                display: block;
+                overflow: hidden;
+                    .column:nth-child(1){
+                 @extend %column-feature;
+                }
+                
+               
+                  .column:nth-child(2){
+                      width: 50%;
+                      float: left;
+                      
+                    @include max(992){
+                        display: none;
+                    }
+                }
+                    .column:nth-child(3){
+                    @extend %column-feature;
+                        
+                }
+                
+              
+            }
+            .features__card{
+                @include max(767){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                &:not(:last-child){
+                    margin-bottom: 5rem;
+                }
+                 @include max(1200){
+                   &:not(:last-child){
+                    margin-bottom: 2rem;
+                }
+                }
+               
+                .seticon{
+                    font-size: 28px;
+                    width: 50px;
+                    margin-top: 5px;
+                    display:inline-block;
+                    @include max(767){
+                        text-align: center;
+                    }
+                    
+                   
+                }
+               
+                
+                &__text{
+                    width: 85%;
+                     @include min(991){
+                        width: 170px;
+                    }
+                    @include min(1200){
+                        width: 220px;
+                    }
+                   
+                    max-width: 100%;
+                    @include max(767){
+                        width: 100%;
+                        text-align: center;
+                        margin-top: 2rem;
+                    }
+                    h6{
+                        font-size: 1.3rem;
+                        color: #111;
+                        letter-spacing: 2px;
+                        margin-bottom: 1rem;
+                    }
+                    p{
+                        color: #666;
+                        font-family: 'Open Sans', sans-serif;
+                        letter-spacing: .25px;
+                        line-height: 1.8;
+                        font-size: 1.2rem;
+
+                    }
+                }
+            }
+            .img__content{
+
+           
+                img{
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+        
+    }
+}
+
+
+

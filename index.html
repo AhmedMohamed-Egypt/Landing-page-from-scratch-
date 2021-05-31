@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Titan Project Developments">
+      <title>Titan Project</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/bulma.min.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script></script>
+   </head>
+   <body onload="getDynW();getWidthTablet();getWidthMobile();" onresize="getDynW();getWidthTablet();getWidthMobile()">
+      <!-- START Hero Area & NavBar -->
+      <section class="hero heroarea" >
+         <div id="upperNav">
+            <div class="container">
+               <nav class="navbar" role="navigation" aria-label="main navigation">
+                  <div class="navbar-brand">
+                     <a class="navbar-item" href="https://bulma.io">
+                     <span class="is-uppercase">titan</span>
+                     </a>
+                  </div>
+                  <div class="Hamburgmenu">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <div id="navbarBasicExample" class="navbar-menu">
+                     <div class="navbar-start">
+                        <ul class="main-navlist">
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              home
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    default
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    one page
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    agency
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    portfolio
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    resturant
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    finance
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    landing page
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    photography
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    shop
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              headers
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Static Image Header
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a> 
+                                    <ul class="side-dropdown1">
+                                       <li><a href="#">full screen</a></li>
+                                       <li><a href="#">classic</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Flexslider Header
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="side-dropdown2">
+                                       <li><a href="#">full screen</a></li>
+                                       <li><a href="#">classic</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Video Background Header
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="side-dropdown3">
+                                       <li><a href="#">full screen</a></li>
+                                       <li><a href="#">classic</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Text Rotator Header
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="side-dropdown4">
+                                       <li><a href="#">full screen</a></li>
+                                       <li><a href="#">classic</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Gradient Overlay Header
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="side-dropdown5">
+                                       <li><a href="#">full screen</a></li>
+                                       <li><a href="#">classic</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              pages
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    About
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="page-dropdown1">
+                                       <li><a href="#">About 1</a></li>
+                                       <li><a href="#">About 2</a></li>
+                                       <li><a href="#">About 3</a></li>
+                                       <li><a href="#">About 4</a></li>
+                                       <li><a href="#">About 5</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    services
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="page-dropdown2">
+                                       <li><a href="#">service 1</a></li>
+                                       <li><a href="#">service 2</a></li>
+                                       <li><a href="#">service 3</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    pricing
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="page-dropdown3">
+                                       <li><a href="#">price 1</a></li>
+                                       <li><a href="#">price 2</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    gallery
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="page-dropdown4">
+                                       <li><a href="#">2 columns</a></li>
+                                       <li><a href="#">3 columns </a></li>
+                                       <li><a href="#">4 columns</a></li>
+                                       <li><a href="#">6 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    contact
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="page-dropdown5">
+                                       <li><a href="#">contact 1 </a></li>
+                                       <li><a href="#">contact 2  </a></li>
+                                       <li><a href="#">contact 3 </a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    restaurant menu
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="page-dropdown6">
+                                       <li><a href="#">menu 2 columns</a></li>
+                                       <li><a href="#">menu 3 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    login / register
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    faq
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    page 404
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              portfolio
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    boxed
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown1">
+                                       <li>
+                                          <a href="#"> 2 columns</a>
+                                       </li>
+                                       <li>
+                                          <a href="#"> 3 columns</a>
+                                       </li>
+                                       <li>
+                                          <a href="#"> 4 columns</a>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    boxed - gutter
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown2">
+                                       <li><a href="#"> 2 columns</a></li>
+                                       <li><a href="#"> 3 columns</a></li>
+                                       <li><a href="#"> 4 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    full width
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown3">
+                                       <li><a href="#"> 2 columns</a></li>
+                                       <li><a href="#"> 3 columns</a></li>
+                                       <li><a href="#"> 4 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    full width - gutter
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown4">
+                                       <li><a href="#"> 2 columns</a></li>
+                                       <li><a href="#"> 3 columns</a></li>
+                                       <li><a href="#"> 4 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    masonry
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown5">
+                                       <li>
+                                          <a href="#">
+                                          boxed
+                                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                          </a>
+                                          <ul class="boxed-dropdown">
+                                             <li><a href="#">2 columns</a></li>
+                                             <li><a href="#">3 columns</a></li>
+                                             <li><a href="#">4 columns</a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#"> 
+                                          full width
+                                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                          </a>
+                                          <ul class="fullwidth-dropdown">
+                                             <li><a href="#">2 columns</a></li>
+                                             <li><a href="#">3 columns</a></li>
+                                             <li><a href="#">4 columns</a></li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    hover style
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown6">
+                                       <li><a href="#"> black</a></li>
+                                       <li><a href="#"> gradient</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    single
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="portfoli-dropdown7">
+                                       <li>
+                                          <a href="#"> 
+                                          featured image
+                                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                          </a>
+                                          <ul class="featured1">
+                                             <li><a href="#">style 1 </a></li>
+                                             <li><a href="#">style 2 </a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">
+                                          featured slider
+                                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                          </a>
+                                          <ul class="featured2">
+                                             <li><a href="#">style 1 </a></li>
+                                             <li><a href="#">style 2 </a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#"> 
+                                          featured video
+                                          <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                          </a>
+                                          <ul class="featured3">
+                                             <li><a href="#">style 1 </a></li>
+                                             <li><a href="#">style 2 </a></li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#"  class="navbar-link">
+                              blog
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    standard
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="blog-slidedown1">
+                                       <li><a href="#">left sidebar</a></li>
+                                       <li><a href="#">right sidebar</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    grid
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="blog-slidedown2">
+                                       <li><a href="#">2 columns</a></li>
+                                       <li><a href="#">3 columns</a></li>
+                                       <li><a href="#">4 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    masonry
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="blog-slidedown3">
+                                       <li><a href="#">2 columns</a></li>
+                                       <li><a href="#">3 columns</a></li>
+                                       <li><a href="#">4 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    single
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="blog-slidedown4">
+                                       <li><a href="#">left sidebar</a></li>
+                                       <li><a href="#">right sidebar</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              features
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    alert and wells
+                                    <i class="fa fa-bolt"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    buttons
+                                    <i class="fa fa-link fa-sm"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Tabs &amp; Accordions
+                                    <i class="fa fa-tasks"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Contents Box
+                                    <i class="fa fa-list-alt"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Forms
+                                    <i class="fa fa-check-square-o"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Icons
+                                    <i class="fa fa-star"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Progress Bars
+                                    <i class="fa fa-server"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    Typography
+                                    <i class="fa fa-font"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              shop
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    product
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="shop-dropdown">
+                                       <li><a href="#">3 columns</a></li>
+                                       <li><a href="#">4 columns</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    single product
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    check out
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="navbar-item has-dropdown is-hoverable">
+                              <a href="#" class="navbar-link">
+                              Documentation
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              </a>
+                              <ul class="navbar-dropdown">
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    contact form
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    reservation form
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    mailchimp
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    google map
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    plugins
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="navbar-item">
+                                    changelog
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+         <div class="hero-body">
+            <div class="container">
+               <h4> hello &amp; welcome</h4>
+               <h1 class="title">
+                  we are titan
+               </h1>
+               <a class="button is-primary is-inverted is-outlined is-uppercase" href="#">learn more</a>
+            </div>
+         </div>
+         <div class="player" >
+            <video  muted autoplay loop playsinline  preload>
+               <source src="imgs/video/main-video.mp4" type="video/mp4">
+            </video>
+         </div>
+         <!--Button To Unmute the Video -->
+         <div class="container" style="width:100%">
+            <div class="muteVideo">
+               <span></span>
+               <span>Un mute</span>
+            </div>
+         </div>
+      </section>
+      <!-- END Hero Area & NavBar -->
+      <!-- Start features-->
+      <section class="features">
+         <div class="features__content">
+            <div class="container">
+               <div class="features__content--headings">
+                  <h2 class="is-size-1 is-uppercase has-text-centered">Our features</h2>
+                  <p class="has-text-centered">
+                     A wonderful serenity has taken  possession of my entire soul, like  these sweet mornings of spring which I enjoy with my whole heart.
+                  </p>
+               </div>
+               <div class="features__content--promo">
+                  <div class="columns">
+                     <div class="column  ">
+                        <div class="features__card is-flex">
+                           <span class="icon-strategy seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">Branding</h6>
+                              <p class="">
+                                 A wonderful serenity has taken  possession  of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="features__card is-flex">
+                           <span class="icon-tools-2 seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">DEVELOPMENT</h6>
+                              <p class="">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="features__card is-flex">
+                           <span class="icon-target seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">MARKETING</h6>
+                              <p class="">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="features__card is-flex">
+                           <span class="icon-tools seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">DESIGN</h6>
+                              <p class="">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="column ">
+                        <div class="img__content">
+                           <img data-src="imgs/feature/promo.png" alt="Feature Section">
+                        </div>
+                     </div>
+                     <div class="column  ">
+                        <div class="features__card is-flex">
+                           <span class="icon-camera seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">PHOTOGRAPHY</h6>
+                              <p class="">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="features__card is-flex">
+                           <span class="icon-mobile seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">MOBILE</h6>
+                              <p class="">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="features__card is-flex">
+                           <span class="icon-linegraph seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">MUSIC</h6>
+                              <p class="is-size-5">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="features__card is-flex">
+                           <span class="icon-basket seticon"></span>
+                           <div class="features__card__text">
+                              <h6 class=" is-uppercase">SHOP</h6>
+                              <p class="">
+                                 A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End features-->
+      <!--Start presntaion Section -->
+      <section class="presntaion">
+         <img data-src="imgs/PRESENTATION/jungle.jpg" alt="PRESENTATION">
+         <div class="content">
+            <a href="#"><span class="icon-video"></span></a>
+            <h3 class="is-uppercase">presentation</h3>
+            <p class="is-uppercase">WATCH THE VIDEO ABOUT OUR NEW PRODUCTS</p>
+         </div>
+         <div class="overlay">
+            <div class="iframe">
+               <iframe class="youtubevideo" data-src="https://www.youtube.com/embed/TTxZj3DZiIM" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <i class="fa fa-times stop-video" aria-hidden="true"></i>
+            </div>
+         </div>
+      </section>
+      <!--End presntaion Section -->
+      <!--Start ourworks Section -->
+      <section class="ourworks">
+         <div class="content">
+            <h2 class="has-text-centered is-size-1 is-uppercase	">our works</h2>
+            <div class="tabs is-centered">
+               <ul>
+                  <li >
+                     <a class=" is-uppercase is-size-5 ">All</a>
+                  </li>
+                  <li>
+                     <a class="is-uppercase is-size-5 " data-attr = illustrator>illustration</a>
+                  </li>
+                  <li><a class="is-uppercase is-size-5 " data-attr = marketing>marketing</a></li>
+                  <li><a class="is-uppercase is-size-5 " data-attr = photography>photography</a></li>
+                  <li><a class="is-uppercase is-size-5 " data-attr = webdesign>web design</a></li>
+               </ul>
+            </div>
+            <div class="works-photos">
+               <a href="#" class="">
+                  <img data-src="imgs/grid-image/grid-portfolio1.jpg" alt="">
+                  <div class="overlay">
+                     <div class="content">
+                        <h3 class="is-uppercase">corporate idenity</h3>
+                        <p class="is-uppercase">illustration</p>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="">
+                  <img data-src="imgs/grid-image/grid-portfolio2.png" alt="">
+                  <div class="overlay">
+                     <div class="content">
+                        <h3 class="is-uppercase">bag mockup</h3>
+                        <p class="is-uppercase">marketing</p>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="">
+                  <img data-src="imgs/grid-image/grid-portfolio3.jpg" alt="">
+                  <div class="overlay">
+                     <div class="content">
+                        <h3 class="is-uppercase">disk cover</h3>
+                        <p class="is-uppercase">illustration</p>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class=" ">
+                  <img data-src="imgs/grid-image/grid-portfolio4.jpg" alt="">
+                  <div class="overlay">
+                     <div class="content">
+                        <h3 class="is-uppercase">business card</h3>
+                        <p class="is-uppercase">photography</p>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="">
+                  <img data-src="imgs/grid-image/grid-portfolio5.jpg" alt="">
+                  <div class="overlay">
+                     <div class="content">
+                        <h3 class="is-uppercase">web design</h3>
+                        <p class="is-uppercase">webdesign</p>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="">
+                  <img data-src="imgs/grid-image/grid-portfolio6.jpg" alt="">
+                  <div class="overlay">
+                     <div class="content">
+                        <h3 class="is-uppercase">paper clip</h3>
+                        <p class="is-uppercase">marketing</p>
+                     </div>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+      <!--End ourworks Section -->
+      <!--Start want-see-our-work Section -->
+      <section class="want-see-our-work">
+         <div class="container">
+            <div class="content">
+               <div class="text">
+                  <h3 class="is-uppercase">want to see our works?</h3>
+                  <p class="is-uppercase">we are always open to interesting projects.</p>
+               </div>
+               <div class="view-portfolio">
+                  <a class="button is-light is-uppercase" href="#">Lets view portfolio</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--End want-see-our-work Section -->
+      <!--Start ourservices Section -->
+      <section class="ourservices">
+         <div class="container">
+            <div class="ourservices__content--headings">
+               <h2 class="is-size-1 is-uppercase has-text-centered">our services</h2>
+               <p class="has-text-centered">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+               </p>
+            </div>
+            <div class="ourservices__content--cards">
+               <div class="columns">
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-lightbulb"></span>
+                        <h3 class="is-uppercase"> ideas and concepts</h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-bike"></span>
+                        <h3 class="is-uppercase">  optimised for speed </h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-tools"></span>
+                        <h3 class="is-uppercase"> designs &amp; interfaces</h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-gears"></span>
+                        <h3 class="is-uppercase"> highly customizable</h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-tools-2"></span>
+                        <h3 class="is-uppercase">  coding &amp; development</h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-genius"></span>
+                        <h3 class="is-uppercase">features &amp; plugins </h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-mobile"></span>
+                        <h3 class="is-uppercase">responsive design</h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourservices__content--cards--card has-text-centered ">
+                        <span class="icon-lifesaver"></span>
+                        <h3 class="is-uppercase">dedicated support </h3>
+                        <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--End ourservices Section -->
+      <hr>
+      <!--Start ourteam Section -->
+      <section class="ourteam">
+         <div class="container">
+            <div class="ourteam__content--headings">
+               <h2 class="is-size-1 is-uppercase has-text-centered">MEET OUR TEAM</h2>
+               <p class="has-text-centered">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+               </p>
+            </div>
+            <div class="ourteam__cards">
+               <div class="columns">
+                  <div class="column">
+                     <div class="ourteam__cards--card">
+                        <div class="image-overlay">
+                           <img data-src="imgs/team/team-1.jpg" alt="">
+                           <div class="overlay">
+                              <div class="overlay__content">
+                                 <h4 class="is-uppercase">hi all</h4>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam</p>
+                                 <div class="social">
+                                    <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-dribbble"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-skype"></i> 
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <h3 class="is-uppercase">jim stone</h3>
+                        <p class="is-uppercase">art director</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourteam__cards--card">
+                        <div class="image-overlay">
+                           <img data-src="imgs/team/team-2.jpg" alt="">
+                           <div class="overlay">
+                              <div class="overlay__content">
+                                 <h4 class="is-uppercase">good day</h4>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam</p>
+                                 <div class="social">
+                                    <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-dribbble"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-skype"></i> 
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <h3 class="is-uppercase">andy river</h3>
+                        <p class="is-uppercase">creative director</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourteam__cards--card">
+                        <div class="image-overlay">
+                           <img data-src="imgs/team/team-3.jpg" alt="">
+                           <div class="overlay">
+                              <div class="overlay__content">
+                                 <h4 class="is-uppercase">hello</h4>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam</p>
+                                 <div class="social">
+                                    <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-dribbble"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-skype"></i> 
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <h3 class="is-uppercase">adele snow</h3>
+                        <p class="is-uppercase">account manager</p>
+                     </div>
+                  </div>
+                  <div class="column">
+                     <div class="ourteam__cards--card">
+                        <div class="image-overlay">
+                           <img data-src="imgs/team/team-4.jpg" alt="">
+                           <div class="overlay">
+                              <div class="overlay__content">
+                                 <h4 class="is-uppercase">yes,it's me</h4>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&nbsp;iaculis diam</p>
+                                 <div class="social">
+                                    <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-dribbble"></i>
+                                    </a>
+                                    <a href="#">
+                                    <i class="fa fa-skype"></i> 
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <h3 class="is-uppercase">dylan woods</h3>
+                        <p class="is-uppercase">developer</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--END ourteam Section -->
+      <!--Start main-carousel Section -->
+      <section class="main-carousel">
+         <div class="carousel">
+            <div class="carousel-inner">
+               <div class="item active">
+                  <div class="container">
+                     <span class="icon-quote"></span>
+                     <blockquote class="is-uppercase">I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine..</blockquote>
+                     <p class="author is-uppercase">jack woods</p>
+                     <span class="is-uppercase">somecompany inc, ceo</span>
+                  </div>
+               </div>
+               <div class="item">
+                  <div class="container">
+                     <span class="icon-quote"></span>
+                     <blockquote class="is-uppercase">I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."</blockquote>
+                     <p class="author is-uppercase">adele snow</p>
+                     <span class="is-uppercase">somecompany inc, ceo</span>
+                  </div>
+               </div>
+               <div class="item">
+                  <div class="container">
+                     <span class="icon-quote"></span>
+                     <blockquote class="is-uppercase">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</blockquote>
+                     <p class="author is-uppercase">Jim stone</p>
+                     <span class="is-uppercase">somecompany inc, ceo</span>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-control left">
+               <div class="arrow left"></div>
+            </div>
+            <div class="carousel-control right">
+               <div class="arrow right"></div>
+            </div>
+            <ol class="carousel-indicators">
+               <li class="active"></li>
+               <li></li>
+               <li></li>
+            </ol>
+         </div>
+      </section>
+      <!--END main-carousel Section -->
+      <!--Start blog Section -->
+      <section class="blog">
+         <div class="container">
+            <div class="blog__content--headings">
+               <h2 class="is-size-1 is-uppercase has-text-centered">LATEST BLOG POSTS</h2>
+               <p class="has-text-centered">
+                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+               </p>
+            </div>
+            <div class="blog__content--cards">
+               <div class="columns">
+                  <div class="column ">
+                     <div class="blog__content--cards__card">
+                        <div class="card">
+                           <div class="card-image">
+                              <a href="#" class="image is-4by3">
+                              <img data-src="imgs/post-cards/post-1.jpg" alt="Placeholder image">
+                              </a>
+                           </div>
+                           <div class="card-content">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <a href="#" class="title is-4 is-uppercase ">Our trip to the Alps</a>
+                                    <p class="subtitle is-6">
+                                       <span class="is-uppercase">by</span>
+                                       <a href="#" class="is-uppercase">mark stone</a>
+                                       <span class="is-uppercase">| 23 november | </span>
+                                       <span class="is-uppercase">3 comments </span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="content">
+                                 <p>
+                                    A wonderful serenity has taken possession of my entire soul,<br> like these sweet mornings of spring which I enjoy with my whole heart.. 
+                                 </p>
+                                 <a href="#">Read more</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="column ">
+                     <div class="blog__content--cards__card">
+                        <div class="card">
+                           <div class="card-image">
+                              <a href="#" class="image is-4by3">
+                              <img data-src="imgs/post-cards/post-2.jpg" alt="Placeholder image">
+                              </a>
+                           </div>
+                           <div class="card-content">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <a href="#" class="title is-4 is-uppercase ">SHORE AFTER THE TIDE</a>
+                                    <p class="subtitle is-6">
+                                       <span class="is-uppercase">by</span>
+                                       <a href="#" class="is-uppercase">ANDY RIVER</a>
+                                       <span class="is-uppercase">| 23 november | </span>
+                                       <span class="is-uppercase">3 comments </span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="content">
+                                 <p>
+                                    A wonderful serenity has taken possession of my entire soul,<br> like these sweet mornings of spring which I enjoy with my whole heart.. 
+                                 </p>
+                                 <a href="#">Read more</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="column ">
+                     <div class="blog__content--cards__card">
+                        <div class="card">
+                           <div class="card-image">
+                              <a href="#" class="image is-4by3">
+                              <img data-src="imgs/post-cards/post-3.jpg" alt="Placeholder image">
+                              </a>
+                           </div>
+                           <div class="card-content">
+                              <div class="media">
+                                 <div class="media-content">
+                                    <a href="#" class="title is-4 is-uppercase ">WE IN NEW ZEALAND</a>
+                                    <p class="subtitle is-6">
+                                       <span class="is-uppercase">by</span>
+                                       <a href="#" class="is-uppercase">DYLAN WOODS</a>
+                                       <span class="is-uppercase">| 23 november | </span>
+                                       <span class="is-uppercase">3 comments </span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="content">
+                                 <p>
+                                    A wonderful serenity has taken possession of my entire soul,<br> like these sweet mornings of spring which I enjoy with my whole heart.. 
+                                 </p>
+                                 <a href="#">Read more</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--END blog Section -->
+      <!--Start subscribe Section -->
+      <section class="subscribe">
+         <div class="container">
+            <div class="content">
+               <div class="text">
+                  <h3 class="is-uppercase">subscribe now</h3>
+                  <p class="is-uppercase"> we will not spam your email.</p>
+               </div>
+               <div class="form-subscribe">
+                  <div class="field has-addons">
+                     <form action="" method="">
+                        <div class="control">
+                           <input  class="input" type="text" placeholder="Your Email">
+                           <p  class="validemail is-uppercase"></p>
+                        </div>
+                        <div class="control">
+                           <button  type="submit" class="button is-info">
+                           submit
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--END subscribe Section -->
+      <!--Start getintouch Section -->
+      <section class="getintouch">
+         <div class="container">
+            <div class="getintouch__content">
+               <h2 class="is-size-1 is-uppercase has-text-centered">GET IN TOUCH</h2>
+            </div>
+            <div class="getintouch__form">
+               <form action="" method="">
+                  <div class="control">
+                     <input class="input" type="text" placeholder="your name*"  >
+                     <p class="validName"></p>
+                  </div>
+                  <div class="control">
+                     <input class="input" type="email" placeholder="your email*" >
+                     <p class="validmail2"></p>
+                  </div>
+                  <div class="control">
+                     <textarea class="textarea" placeholder="your message*"></textarea>
+                  </div>
+                  <div class="control">
+                     <button class="button is-uppercase">Submit</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </section>
+      <!--END getintouch Section -->
+      <!--Start footer Section -->
+      <section class="footer">
+         <div class="container">
+            <div class="columns">
+               <div class="column">
+                  <div class="footer__part1">
+                     <h5 class="is-uppercase">about titan</h5>
+                     <p>
+                        The languages only differ in their grammar, their pronunciation and their most common words
+                     </p>
+                     <p>
+                        <span>Phone</span>: +1 234 567 89 10
+                     </p>
+                     <p>
+                        <span>Fax</span>  : +1 234 567 89 10
+                     </p>
+                     <p>
+                        <span>Email</span>: <a href="#">somecompany@example.com</a>
+                     </p>
+                  </div>
+               </div>
+               <div class="column ">
+                  <div class="footer__part2">
+                     <h5 class="is-uppercase">recent comments </h5>
+                     <ul class="icon-list">
+                        <li><span>Maria on</span> <a href="#">Designer Desk Essentials</a></li>
+                        <li><span>John on</span> <a href="#">Realistic Business Card Mockup</a></li>
+                        <li><span>Andy on</span> <a href="#">Eco bag Mockup</a></li>
+                        <li><span>Jack on</span> <a href="#">Bottle Mockup</a></li>
+                        <li><span>Mark on</span> <a href="#">Our trip to the Alps</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="column">
+                  <div class="footer__part3">
+                     <h5 class="is-uppercase">
+                        blog categories
+                     </h5>
+                     <ul class="">
+                        <li><a href="#">Photography - 7</a></li>
+                        <li><a href="#">Web Design - 3</a></li>
+                        <li><a href="#">Illustration - 12</a></li>
+                        <li><a href="#">Marketing - 1</a></li>
+                        <li><a href="#">Wordpress - 16</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="column ">
+                  <div class="footer__part4">
+                     <h5 class="is-uppercase">popular posts</h5>
+                     <div class="popularposts">
+                        <div class="popularposts__link1">
+                           <a href="#">
+                           <img data-src="imgs/popular-imgs/rp-1.jpg" alt="popular">
+                           </a>
+                           <div class="designer">
+                              <a href="#">Designer Desk Essentials</a>
+                              <span>23 january</span>
+                           </div>
+                        </div>
+                        <div class="popularposts__link2">
+                           <a href="#">
+                           <img data-src="imgs/popular-imgs/rp-2.jpg" alt="popular">
+                           </a>
+                           <div class="designer">
+                              <a href="#">Realistic Business Card Mockup</a>
+                              <span>15 February</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer__copyright">
+            <div class="container">
+               <div class="footer__copyright--main">
+                  <div class="footer__copyright__details">
+                     &copy; <span id="datecopyright"></span>
+                     <a href="#" class="is-uppercase">Titan <span>,</span></a>
+                     <p class="is-uupercase"> ALL RIGHTS RESERVED</p>
+                  </div>
+                  <div class="footer__copyright__social">
+                     <a href="#">
+                     <i class="fa fa-facebook"></i>
+                     </a>
+                     <a href="#">
+                     <i class="fa fa-twitter"></i>
+                     </a>
+                     <a href="#"><i class="fa fa-dribbble"></i>
+                     </a><a href="#"><i class="fa fa-skype"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--END footer Section -->
+      <!--scrolltopbutton-->
+      <a href="#" class="scrolltop">
+         <!--Style In Abstract folder in Genreal Components -->
+         <i class="fa fa-angle-double-up"></i>
+      </a>
+      <!--scrolltopbutton-->
+      <!-- Start loadoverlay-->
+      <div class="overlayload">
+         <!--Style In Abstract folder in Genreal Components -->
+         <div class="load"></div>
+      </div>
+      <!-- End loadoverlay-->
+      <script src="js/file.js"></script>
+   </body>
+</html>

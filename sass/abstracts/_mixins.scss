@@ -1,0 +1,229 @@
+
+
+
+//overlay 
+@mixin overlay(){
+    content: "";
+    position: absolute;
+   top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	z-index: -1;
+    
+}
+
+//Center Elements
+
+
+@mixin centerElement(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+//Draw Circle element 
+
+
+@mixin circleBackground($WH,$brdradius,$color){
+	
+	width: $WH#{px};
+	border-radius:$brdradius;
+	height: $WH#{px};
+	background-color: $color;
+}
+
+
+//Mixins for responsive layout 
+
+$px : "px";
+@mixin max($width){
+    @media (max-width:$width#{$px}){
+        @content
+    }
+}
+    
+@mixin min($width){
+        @media (min-width:$width#{$px}){
+            @content
+            }
+        }
+    
+@mixin media($width1,$width2){
+        @media(min-width:$width1#{$px}) and (max-width:$width2#{$px}){@content}
+        }
+
+/*animation*/
+
+@keyframes fadein{
+    
+    
+    0%{
+        opacity: .4
+    }
+    
+    50%{
+        opacity: .8
+    }
+    
+    100%{
+        opacity: 1;
+        
+    }
+}
+
+//sticky
+
+@keyframes sticky{
+    
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 0;
+    }
+}
+//hide works 
+
+@keyframes fadeworksIn{
+    
+    0%{
+        opacity: 0;
+       
+    }
+    
+    100%{
+        
+        opacity: 1;
+      
+       
+        
+    }
+}
+
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.01;
+    }
+    20% {
+        opacity: 0.02;
+    }
+    30% {
+        opacity: 0.05;
+    }
+    40% {
+        opacity: 0.06;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.85;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*Animation Wow for make elemnts fade up if want */
+@keyframes wow {
+    
+    
+    from {
+        opacity: 0;
+        position: relative;
+        top: 200px;
+    }
+    
+    to{
+        opacity: 1;
+        position: relative;
+        top: 0px;
+    }
+    
+    
+}
+
+/*Animation for make button video mute/unmute*/
+@keyframes buttonVideo{
+    
+    from {
+        opacity: 0;
+        background-color: rgba(#fff,.5);
+    }
+    
+    to{
+        opacity: 100;
+        background-color: rgba(#2980b9,.5);
+    }
+}
+
+
+
+
+/*animation for spin load */
+
+
+ @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+}
+ 
+
+ @-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+@keyframes fadeOut{
+    
+    0%{
+        opacity: 1;
+    }
+    
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

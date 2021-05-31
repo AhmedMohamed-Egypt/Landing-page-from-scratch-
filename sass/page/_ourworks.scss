@@ -1,0 +1,254 @@
+/*Grouoing Animation for tab link to be common in same style */
+
+%animatescroll{
+      animation-name: fadeworksIn;
+    animation-duration: .5s;
+    animation-fill-mode:forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
+.ourworks{
+    /*Apply animation when page open */
+        @extend %fadeOutSections;
+     &.wow{
+        animation-name: wow;
+        animation-duration: .5s;
+        animation-timing-function: ease-in-out;
+       animation-fill-mode: both;
+    }
+    .content{
+        margin-bottom: .5rem;
+        h2{
+            letter-spacing: 4px;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+        }
+        
+        .tabs {
+            margin-bottom: 5rem;
+            ul{
+                    border: none;
+                display: flex;
+                max-width: 90%;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: auto;
+                @include max(600){
+                    width: 70%;
+                    margin: auto;
+                    max-width: 100%;
+                }
+         
+            li{
+                
+                /*Add animation when scroll*/
+                
+                &:nth-child(1){
+                    >a{
+                        
+                &.fadeout{
+                   @extend %animatescroll;
+                    animation-delay: .2s;
+                        }
+               
+                    }
+                }
+                 &:nth-child(2){
+                    >a{
+                        
+                &.fadeout{
+             @extend %animatescroll;
+                     animation-delay: .4s;
+                        }
+               
+                    }
+                }
+                &:nth-child(3){
+                    >a{
+                        
+                &.fadeout{
+               @extend %animatescroll;
+                     animation-delay: .6s;
+                        }
+               
+                    }
+                }
+                &:nth-child(4){
+                    >a{
+                        
+                &.fadeout{
+                 @extend %animatescroll;
+                     animation-delay: .8s;
+                        }
+               
+                    }
+                }
+                
+                &:nth-child(5){
+                    >a{
+                        
+                &.fadeout{
+                  @extend %animatescroll;
+                     animation-delay: 1s;
+                        }
+               
+                    }
+                }
+                
+                &:not(:last-child){
+                    >a{
+                        padding-right: 5rem;
+                        @include max(500){
+                            padding: 2rem;
+                        }
+                         @include max(400){
+                            padding: 1.5rem;
+                        }
+                    }
+                }
+                >a{
+                      letter-spacing: 2px;
+                    border: none;
+               font-family: 'Roboto Condensed', sans-serif;
+                    &.op-0{
+                        opacity: 0;
+                    }
+                    &.active{
+                        color: #aaa;
+                    }
+                    
+                }
+            }
+            }
+        
+        }
+        .works-photos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            overflow: hidden;
+            position: relative;
+          
+            
+            
+            >a{
+                width: 49.5%;
+                transition: .5s;
+                display: block;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 1rem;
+            
+                &.animate{
+                  animation-name: fadeworksIn;
+                animation-duration: .5s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: backwards;
+                }
+              
+                @include min(992){
+                width: 33%;
+                    max-width: 100%;
+                     
+                }
+                @include max(450){
+                    width: 100%;
+                }
+                
+                .overlay{
+                    position: absolute;
+                   top: 0px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    background-color: rgba(255,255,255,0.8);
+                    transition: .5s;
+                    &.show{
+                        opacity: 1
+                    }
+                    .content{
+                        @include centerElement;
+                        top:-25px;
+                        transition: .5s;
+                        &.drop{
+                            top: 50%;
+                        }
+                        h3{
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            letter-spacing: 2px;
+                            
+                        }
+                        p{
+                            font-size: 1.2rem;
+                            letter-spacing: 2px;
+                            color: #aaa;
+                            font-family: 'Roboto Condensed', sans-serif;
+                            text-align: center;
+                        }
+                    }
+                }
+                &:hover .content{
+                    top: 50%;
+                    transition: .5s;
+                    width: 100%;
+                    text-align: center;
+                }
+                 &:hover .overlay{
+                    opacity: 1;
+                     
+                }
+                &:hover > img{
+                    transform: scale(1.1) rotate(2deg);
+                }
+               
+                img{
+                    
+                    transition: .2s;
+                    display: block;
+                     width: 100%;
+                  height: 302px;
+                    &.adjustHeight{
+                        height: auto;
+                    }
+                   
+                   
+                }
+                
+               
+                
+            }
+        }
+    }
+   
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

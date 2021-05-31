@@ -1,0 +1,1017 @@
+/*Main Nav Bar section width Id upperNav*/
+
+#upperNav {
+    padding: 2rem 0;
+font-family: 'Roboto Condensed', sans-serif;
+    @include max(767) {
+        background-color: rgba(10, 10, 10, 0.9);
+        padding: .3rem 0;
+    }
+
+    /*Main Container In NavBar */
+    .container {
+        @include max(768) {
+            padding: 0 !important;
+        }
+    }
+
+    /*Add class when make scroll for sticky heaeder*/
+    &.headerBlack {
+        background-color: $black;
+        position: fixed;
+        width: 100%;
+        transition: .5s;
+        animation-name: sticky;
+        animation-duration: .5s;
+        z-index: 999999;
+        padding: 0;
+
+    }
+
+    /*section contain navbar brand and list item of main links*/
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        /*Nav Bar Brand TITAN*/
+        .navbar-brand {
+
+            @include max(768) {
+                padding-left: 2rem;
+            }
+
+            /*Link in Nav Bar Brand */
+            .navbar-item {
+                padding-left: 0;
+                  font-family: 'Roboto Condensed', sans-serif;
+
+                span {
+                    display: block;
+                    font-size: 2.2rem;
+                    letter-spacing: 4px;
+                    color: $white;
+
+                }
+
+                &:hover {
+                    color: #000;
+                }
+            }
+
+
+        }
+
+        /*Hamburg Menu */
+        .Hamburgmenu {
+
+            cursor: pointer;
+            display: none;
+            transition: .5s;
+
+            /*Class to add when click to rotate by js */
+            &.rotate {
+                transform: rotate(180deg);
+
+            }
+
+            @include max(767) {
+                display: block;
+                position: relative;
+                right: 2rem;
+
+            }
+
+            /*3spans that are white dash */
+            span {
+                display: block;
+                width: 30px;
+                height: 4px;
+                background-color: $white;
+                border-radius: 1px;
+                cursor: pointer;
+                transition: .5s;
+
+
+                &:nth-child(1) {
+
+                    /*rotate first span */
+                    &.rotate1 {
+                        transform: rotate(45deg) translateX(-2px) translateY(6px);
+                        animation-fill-mode: both;
+                        animation-duration: .5s;
+                        animation-timing-function: ease-in-out;
+                        animation-name: fadeInMenu;
+                        width: 25px;
+
+                    }
+                }
+
+                /*hide second span */
+                &:nth-child(2) {
+                    margin: 4px 0;
+
+                    &.hide {
+                        opacity: 0;
+                        margin: 0;
+
+
+
+                    }
+                }
+
+                /*rotate span no 3*/
+                &:nth-child(3) {
+
+                    &.rotate3 {
+                        transform: rotate(-45deg) translateX(0px) translateY(-7px);
+                        animation-fill-mode: both;
+                        animation-duration: .5s;
+                        animation-timing-function: ease-in-out;
+                        animation-name: fadeInMenu;
+                        width: 25px;
+
+
+                    }
+                }
+            }
+        }
+
+        /*main links in nav bar*/
+        .navbar-menu {
+            @include min(768) {
+                display: flex;
+                background: none;
+                box-shadow: none;
+            }
+
+            @include max(767) {
+                display: block;
+                background: none;
+                box-shadow: none;
+                width: 100%;
+                padding: 0;
+            }
+
+            .navbar-start {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                @include media(768, 992) {
+                    width: 600px;
+                    max-width: 100%;
+                    justify-content: center;
+                }
+
+                /*ul List that contain links */
+                .main-navlist {
+                    display: flex;
+
+                    @include max(767) {
+                        flex-direction: column;
+                        width: 100%;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height .5s ease-in;
+
+                        /*class slide down in mobile view */
+                        &.slidedown {
+                            max-height: 1000px;
+                            transition: max-height .5s ease-in;
+
+                        }
+                    }
+
+                    /*Direct Childs li*/
+                    >.navbar-item {
+                        @include min(769) {
+                            height: 50px;
+                        }
+
+                        &:hover>ul {
+                            display: block;
+
+
+                        }
+
+                        &:hover .navbar-link {
+                            background: none;
+                        }
+
+                        &:last-child {
+                            >a {
+                                border: none;
+                            }
+                        }
+
+                        /*Direct link a */
+                        >.navbar-link {
+                            text-transform: uppercase;
+                            font-size: 1.1rem;
+                            color: $link-color;
+                            letter-spacing: 3px;
+                            padding-right: .5rem;
+                            font-weight: 400;
+                              font-family: 'Roboto Condensed', sans-serif;
+
+                            &.white {
+                                color: $white;
+                            }
+
+                            @include media(768, 992) {
+                                letter-spacing: normal;
+
+                            }
+
+                            @include min(768) {
+                                line-height: 45px;
+                            }
+
+                            &:hover {
+                                background: none;
+                                color: $white;
+
+                                &::after {
+                                    display: none;
+                                }
+                            }
+
+                            &:focus {
+                                background: none;
+                                outline: 0;
+                            }
+
+                            &:focus-within {
+                                background: none;
+                            }
+
+                            &::after {
+                                display: none;
+                            }
+
+                            @include max(767) {
+                                padding-top: 1.5rem;
+                                padding-bottom: 1.5rem;
+
+                                border-bottom: 1px solid rgba(73, 71, 71, 0.15);
+                                padding-left: 3rem;
+
+                                &:hover {
+                                    background-color: rgba(255, 255, 255, 0.1);
+                                }
+                            }
+
+                            i {
+                                display: inline-block;
+                                padding-left: .5rem;
+                                transition: .2s;
+
+                                &.rotate {
+                                    transform: rotate(180deg);
+                                }
+
+                                @include max(767) {
+                                    position: absolute;
+                                    right: 2rem;
+                                }
+                            }
+
+                        }
+
+                        /*Direct drop down in each main link in nav bar*/
+                        >.navbar-dropdown {
+                            border: none;
+                            width: 180px;
+                            background-color: $background-dropdown;
+                            border-radius: 0;
+                            transition: .2s;
+                            padding: 0;
+
+
+
+
+                            &.appear {
+                                display: block;
+                            }
+
+                            transition: max-height .7s ease-in-out;
+
+                            @include min(768) {
+                                display: none;
+                                position: absolute;
+
+                            }
+
+                            @include max(767) {
+                                max-height: 0;
+                                overflow: hidden;
+                                background: none;
+                                padding: 0;
+                                margin: 0;
+                                width: 100% !important;
+                            }
+
+                            &.show {
+                                max-height: 800px;
+
+                            }
+
+                            /*Direct li in direct dropdown */
+
+                            >li {
+
+                                /*Direct a link  in direct dropdown */
+                                >a {
+                                    text-transform: uppercase;
+                                    font-size: 1.1rem;
+                                    display: block;
+                                    padding: 10px;
+                                    color: $color-link-dropdown;
+                                    letter-spacing: 2px;
+                                    transition: .2s;
+                                    border-bottom: 1px solid rgba(73, 71, 71, 0.15);
+                                    font-family: 'Roboto Condensed', sans-serif;
+                                  
+
+
+                                    @include max(768) {
+                                        padding-left: 3rem;
+                                    }
+
+                                    &:hover {
+                                        background-color: rgba(255, 255, 255, 0.1);
+                                        color: $white;
+                                    }
+
+                                    &:focus {
+                                        background: none;
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Direct li no 2 in main nav bar HEADERS */
+                        &:nth-child(2) {
+                            .navbar-dropdown {
+                                width: 240px;
+
+                                /*Headers contain 5 lists */
+                                @for $i from 1 through 5 {
+                                    li:nth-child(#{$i}) {
+                                        position: relative;
+
+                                        /*5 Lists Contain 5 sub menus */
+                                        .side-dropdown#{$i} {
+                                            position: absolute;
+                                            right: -180px;
+                                            top: 0px;
+                                            background-color: $background-dropdown;
+                                            width: 180px;
+                                            display: none;
+                                            transition: max-height .4s ease-in-out;
+
+                                            @include max(767) {
+                                                display: block;
+                                                position: relative;
+                                                right: auto;
+                                                top: auto;
+                                                width: 100%;
+                                                max-height: 0;
+                                                overflow: hidden;
+                                            }
+
+                                            &.show {
+                                                max-height: 300px;
+                                            }
+
+                                        }
+
+                                        &:hover .side-dropdown#{$i} {
+                                            display: block;
+                                        }
+
+                                        >a {
+                                            @extend %dropdown;
+
+                                            &.grey-lighter {
+                                                color: $grey-lighter;
+                                            }
+
+                                        }
+
+                                    }
+                                }
+
+                                /*Put Chevron arrow in 5 Direct Li */
+                                @for $i from 1 through 5 {
+                                    >li:nth-child(#{$i}) {
+                                        >a {
+                                            &::after {
+                                                display: none;
+
+                                            }
+
+                                            >i {
+                                                position: absolute;
+                                                right: 2rem;
+                                                transform: rotate(-90deg);
+
+                                                &.rotate {
+                                                    transform: rotate(180deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Direct Li Called PAGES */
+                        &:nth-child(3) {
+
+                            /*Direct Dropdown*/
+                            .navbar-dropdown {
+                                width: 180px;
+
+                                /*6 links in drop down of PAGES*/
+                                @for $i from 1 through 6 {
+                                    li:nth-child(#{$i}) {
+                                        .page-dropdown#{$i} {
+                                            position: absolute;
+                                            right: -180px;
+                                            background-color: $background-dropdown;
+                                            width: 180px;
+                                            display: none;
+                                            top: 0px;
+                                            transition: max-height .4s ease-in-out;
+
+                                            @include max(767) {
+                                                display: block;
+                                                position: relative;
+                                                right: auto;
+                                                top: auto;
+                                                width: 100%;
+                                                max-height: 0;
+                                                overflow: hidden;
+                                            }
+
+                                            &.show {
+                                                max-height: 150px;
+                                            }
+                                        }
+
+                                        &:hover .page-dropdown#{$i} {
+                                            display: block;
+                                        }
+
+                                        >a {
+                                            @extend %dropdown;
+
+                                            @include max(767) {
+                                                padding-left: 3rem;
+
+                                                &.grey-lighter {
+                                                    color: $grey-lighter !important;
+                                                }
+                                            }
+
+                                            &:hover {
+                                                background-color: rgba(255, 255, 255, 0.1);
+                                                color: $white;
+                                            }
+
+                                            &:focus {
+                                                background: none;
+                                            }
+                                        }
+
+                                    }
+
+                                }
+
+                                @for $i from 1 through 6 {
+                                    >li:nth-child(#{$i}) {
+                                        position: relative;
+
+                                        >a {
+
+                                            /*element after placed by bulma but i make display none for it as it pesdu element and i need to click on element in the real dom */
+                                            &::after {
+                                                display: none;
+                                            }
+
+                                            >i {
+                                                position: absolute;
+                                                right: 2rem;
+                                                transform: rotate(-90deg);
+
+                                                &.rotate {
+                                                    transform: rotate(180deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Direct Link a Called PORTFOLIO*/
+                        &:nth-child(4) {
+                            .navbar-dropdown {
+                                width: 200px;
+
+                                /*PORTFOLIO CONTAIN 7 LIST ITEM */
+                                @for $i from 1 through 7 {
+                                    li:nth-child(#{$i}) {
+                                        .portfoli-dropdown#{$i} {
+                                            position: absolute;
+                                            right: -180px;
+                                            background-color: $background-dropdown;
+                                            width: 180px;
+                                            display: none;
+                                            top: 0px;
+                                            transition: max-height .4s ease-in-out;
+
+                                            @include max(767) {
+                                                display: block;
+                                                position: relative;
+                                                right: auto;
+                                                top: auto;
+                                                width: 100%;
+                                                max-height: 0;
+                                                overflow: hidden;
+
+                                            }
+
+                                            &.show {
+                                                max-height: 400px;
+                                            }
+                                        }
+
+                                        &:hover .portfoli-dropdown#{$i} {
+                                            display: block;
+                                        }
+
+                                        >a {
+                                            @extend %dropdown;
+
+                                            &.grey-lighter {
+                                                color: $grey-lighter;
+                                            }
+
+                                            @include max(767) {
+                                                padding-left: 3rem;
+                                            }
+
+                                            &:hover {
+                                                background-color: rgba(255, 255, 255, 0.1);
+                                                color: $white;
+                                            }
+
+                                            &:focus {
+                                                background: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                /*List Item No 5 MASONRY */
+                                >li:nth-child(5) {
+                                    @include media(768, 992) {
+                                        &:hover ul {
+                                            right: 200px;
+                                        }
+
+                                        &:hover>a i {
+                                            transform: rotate(90deg);
+
+                                        }
+                                    }
+
+                                    >a {}
+
+                                    /*List Item Masonry Contain 2 sub Menus */
+
+                                    /*Main List Contain 2 Menus */
+                                    .portfoli-dropdown5 {
+                                        >li {
+                                            @include media(768, 992) {
+                                                &:hover ul {
+                                                    right: 180px;
+                                                }
+                                            }
+
+                                            >a {
+                                                &.grey-lighter {
+                                                    color: $grey-lighter;
+                                                }
+
+                                                >i {
+                                                    position: absolute;
+                                                    right: 2rem;
+                                                    transform: rotate(-90deg);
+
+                                                    @include max(767) {
+                                                        &.rotate {
+                                                            transform: rotate(-180deg);
+                                                        }
+                                                    }
+
+                                                    @include media(768, 992) {
+                                                        transform: rotate(90deg);
+                                                    }
+                                                }
+
+                                            }
+                                        }
+
+                                        >li {
+                                            position: relative;
+
+                                            /*First sub menu Called Boxed */
+                                            .boxed-dropdown {
+                                                position: absolute;
+                                                background-color: $background-dropdown;
+                                                position: absolute;
+                                                right: -150px;
+                                                top: 0;
+                                                width: 150px;
+                                                display: none;
+
+                                                @include max(767) {
+                                                    position: relative;
+                                                    display: block;
+                                                    right: auto;
+                                                    top: auto;
+                                                    max-height: 0;
+                                                    transition: max-height .4s ease-in-out;
+                                                    overflow: hidden;
+                                                    width: 100%;
+                                                }
+
+                                                &.show {
+                                                    max-height: 300px;
+                                                }
+
+
+                                            }
+
+                                            /*Second  sub menu Called Boxed */
+                                            .fullwidth-dropdown {
+                                                position: absolute;
+                                                background-color: $background-dropdown;
+                                                position: absolute;
+                                                right: -150px;
+                                                top: 0;
+                                                width: 150px;
+                                                display: none;
+
+                                                @include max(767) {
+                                                    position: relative;
+                                                    display: block;
+                                                    right: auto;
+                                                    top: auto;
+                                                    max-height: 0;
+                                                    transition: max-height .4s ease-in-out;
+                                                    overflow: hidden;
+                                                    width: 100%;
+                                                }
+
+                                                &.show {
+                                                    max-height: 300px;
+                                                }
+
+                                            }
+
+                                            &:hover .boxed-dropdown {
+                                                display: block;
+                                            }
+
+                                            &:hover .fullwidth-dropdown {
+                                                display: block;
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                /*List Item In PORTFOLIO CALLED SINGLE */
+                                >li:nth-child(7) {
+                                    >a {
+                                        @include media(768, 992) {
+                                            &:hover>i {
+                                                transform: rotate(90deg);
+                                            }
+                                        }
+                                    }
+
+                                    /*MIAN LIST IN SINGLE LIST ITEM THAT CONTAIN 3 SUB MENUS featute image feature video feature slider  */
+                                    >.portfoli-dropdown7 {
+                                        >li {
+                                            position: relative;
+
+                                            @for $i from 1 through 3 {
+                                                &:nth-child(#{$i}) {
+                                                    position: relative;
+
+                                                    .featured#{$i} {
+                                                        position: absolute;
+                                                        top: 0;
+                                                        width: 150px;
+                                                        right: -150px;
+                                                        background-color: $background-dropdown;
+                                                        display: none;
+                                                        transition: max-heigh .4s ease-in-out;
+
+                                                        @include media (768, 992) {
+                                                            right: 180px;
+                                                        }
+
+                                                        @include max(767) {
+                                                            display: block;
+                                                            max-height: 0;
+                                                            overflow: hidden;
+                                                            position: relative;
+                                                            right: auto;
+                                                            width: 100%;
+
+                                                        }
+
+                                                        &.show {
+                                                            max-height: 100px;
+
+
+                                                        }
+                                                    }
+
+                                                    >a {
+                                                        i {
+                                                            position: absolute;
+                                                            transform: rotate(-90deg);
+                                                            right: 15px;
+
+                                                            @include media (768, 992) {
+                                                                transform: rotate(90deg);
+                                                            }
+
+                                                            &.rotate {
+                                                                transform: rotate(0deg);
+                                                            }
+                                                        }
+                                                    }
+
+                                                }
+
+                                                &:hover .featured#{$i} {
+                                                    display: block;
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+
+                                /*Put chevron arrow beisde direct list items in portfilio menu */
+                                @for $i from 1 through 7 {
+                                    >li:nth-child(#{$i}) {
+                                        position: relative;
+
+                                        /*In small viewport the side menu will not appear in left side so i make it to view in right side and this in list item called SINGLE*/
+                                        &:nth-child(7) {
+                                            >.portfoli-dropdown7 {
+                                                @include media (768, 992) {
+                                                    right: 180px;
+                                                }
+                                            }
+                                        }
+
+                                        >a {
+                                            &::after {
+                                                display: none;
+
+                                            }
+
+                                            >i {
+                                                position: absolute;
+                                                right: 2rem;
+                                                transform: rotate(-90deg);
+
+                                                &.rotate {
+                                                    transform: rotate(180deg);
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Direct Link Item Called BLOG*/
+                        &:nth-child(5) {
+                            .navbar-dropdown {
+                                width: 180px;
+
+                                /*Blog Item Conatin direct 4 link items*/
+                                @for $i from 1 through 4 {
+                                    li:nth-child(#{$i}) {
+                                        position: relative;
+
+                                        .blog-slidedown#{$i} {
+                                            position: absolute;
+                                            position: absolute;
+                                            right: -180px;
+                                            background-color: $background-dropdown;
+                                            width: 180px;
+                                            display: none;
+                                            top: 0px;
+                                            transition: max-height .4s ease-in-out;
+
+                                            @include max(767) {
+                                                display: block;
+                                                position: relative;
+                                                right: auto;
+                                                top: auto;
+                                                width: 100%;
+                                                max-height: 0;
+                                                overflow: hidden;
+                                            }
+
+                                            &.show {
+                                                max-height: 300px;
+                                            }
+                                        }
+
+                                        &:hover .blog-slidedown#{$i} {
+                                            display: block;
+                                        }
+
+                                        >a {
+                                            @extend %dropdown;
+
+                                            &.grey-lighter {
+                                                color: $grey-lighter;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                /*Put chevron arrow beside direct link items of BLOG */
+                                @for $i from 1 through 4 {
+                                    >li:nth-child(#{$i}) {
+                                        >a {
+                                            &::after {
+                                                display: none;
+                                            }
+
+                                            >i {
+                                                position: absolute;
+                                                right: 2rem;
+                                                transform: rotate(-90deg);
+
+                                                &.rotate {
+                                                    transform: rotate(180deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Direct Item Called features*/
+                        &:nth-child(6) {
+                            .navbar-dropdown {
+                                width: 180px;
+
+                                @include max(767) {
+                                    padding-left: 2rem;
+                                }
+
+                                /*Put chevron arrow beside direct link items of features */
+                                @for $i from 1 through 8 {
+                                    >li:nth-child(#{$i}) {
+                                        a {
+                                            padding: 10px 15px 10px 25px;
+
+                                            i {
+                                                position: absolute;
+                                                top: 15px;
+                                                left: 10px;
+                                                font-size: 11px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Direct link item SHOP*/
+                        &:nth-child(7) {
+                            .navbar-dropdown {
+                                width: 180px;
+
+                                >li {
+                                    position: relative;
+
+                                    &:nth-child(1) {
+
+                                        >a {
+                                            @include media(768, 1400) {
+                                                &:hover i {
+                                                    transform: rotate(90deg);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    /*shop link contain one side menu */
+                                    .shop-dropdown {
+                                        position: absolute;
+                                        top: 0px;
+                                        right: -150px;
+                                        width: 150px;
+                                        background-color: $background-dropdown;
+                                        display: none;
+                                        transition: max-height .4s ease-in-out;
+
+                                        @include max(767) {
+                                            display: block;
+                                            position: relative;
+                                            right: auto;
+                                            top: auto;
+                                            width: 100%;
+                                            max-height: 0;
+                                            overflow: hidden;
+                                        }
+
+                                        @include media(768, 1400) {
+                                            right: 180px;
+                                        }
+
+                                        &.show {
+                                            max-height: 300px;
+                                        }
+
+                                        >li {
+
+                                            >a {
+                                                @extend %dropdown;
+
+                                            }
+                                        }
+
+                                    }
+
+                                    &:hover .shop-dropdown {
+                                        display: block;
+                                    }
+                                }
+
+                                @for $i from 1 through 1 {
+                                    >li:nth-child(#{$i}) {
+                                        >a {
+                                            &.grey-lighter {
+                                                color: $grey-lighter;
+                                            }
+
+                                            >i {
+                                                position: absolute;
+                                                right: 2rem;
+                                                transform: rotate(-90deg);
+
+                                                &.rotate {
+                                                    transform: rotate(180deg);
+                                                }
+                                            }
+
+                                        }
+
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /*Last link Item called Documentaion */
+                        &:nth-child(8) {
+                            >.navbar-dropdown {
+                                right: -33px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}

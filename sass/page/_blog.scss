@@ -1,0 +1,128 @@
+.blog{
+    @extend %fadeOutSections;
+    &.wow{
+    animation-name: wow;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+   animation-fill-mode: both;
+    }
+    &__content--headings{
+        /*Subline Text */
+        @extend %headings;
+    }
+    &__content--cards{
+        >.columns{
+            justify-content: space-between;
+            flex-wrap: wrap;
+            display: flex;
+            >.column{
+                flex-basis: auto;
+                flex-shrink: 0;
+                flex-grow: 0;
+                width: 32.5%;
+                @include max(991){
+                    width: 50%;
+                   
+                }
+                 @include max(767){
+                    width: 100%;
+                }
+              
+            }
+        }
+        &__card{
+            .card{
+                box-shadow: none;
+                .card-image{
+                   
+                    max-width: 100%;
+                 
+                    @include max(767){
+                      
+                    }
+                    a{
+                        padding: 0;
+                        display: block;
+                        height: 100%;
+                    }
+                    img{
+                       position: relative;
+                        height: 200px;
+                        width: 100%;
+                        display: block;
+                        &.adjustHeight{
+                            height: auto;
+                        }
+                    }
+                }
+                 .card-content{
+                padding: 0;
+                     
+                .media{
+                    .media-content{
+                        border-bottom: 1px dotted #c2c2c2;
+                        padding-bottom: 1rem;
+                        >a:nth-child(1){
+                          display: block;
+                          letter-spacing: 2px;
+                            color: #111;
+                            font-weight: 400;
+                            transition: .2s;
+                            margin: 3rem 0px 2rem 0px;
+                            line-height: normal;
+                            font-family: "Roboto Condensed", sans-serif;
+                            &:hover{
+                                color: #aaa;
+                            }
+                        }
+                        >p{
+                            a,span{
+                                letter-spacing: 2px;
+                                font-family: "Roboto Condensed", sans-serif;
+                            }
+                            a{
+                               color: #111; 
+                                font-size: 1.1rem;
+                                transition: .2s;
+                                &:hover{
+                                    color: #aaa;
+                                }
+                            }
+                            span{
+                                color: #aaa;
+                                display: inline-block;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+             .content{
+                 p{
+                     font-size: 1.2rem;
+                     font-family:"Open Sans", sans-serif;
+                    color:rgb(102, 102, 102);
+                     line-height: 1.8;
+                 }
+                 a{
+                     color: #111;
+                     font-size: 1.2rem;
+                     transition: .2s;
+                     font-family:"Open Sans", sans-serif;
+                     font-weight: 400;
+                     &::after{
+                         content: "\00BB";
+                         display:inline-block;
+                         margin-left: 5px;
+                         letter-spacing: 2px;
+                         color: #666666;
+                     }
+                     &:hover{
+                         color: #aaa;
+                     }
+                 }
+             }
+            }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.subscribe{
+    /*Apply Animation fadeout when page open */
+        @extend %fadeOutSections;
+    /*Grouping with same prpoerties in section want to see our works and source code will be found in dry folder */
+    @extend %maincontentshort;
+    margin-top: 16rem;
+    .content{
+        /*Grouping with same prpoerties in section want to see our works and source code will be found in dry folder */
+        @extend %contentShort;
+        @include max(767){
+            width: 100%;
+        }
+        .form-subscribe{
+            @include max(767){
+                width: 100%;
+            }
+            form{
+                display: flex;
+                
+                @include max(767){
+                width: 100%;
+            }
+                >.control:nth-child(1){
+                 width: 100%;
+                }
+                 input{
+                     padding: .5rem 0px .5rem 1rem;
+              @include max(767){
+                width: 100%;
+            }/*Grouping with other input in subscribe section and source code in dry file */
+                  @extend %input;
+                     &::placeholder{
+                         @extend %placeholder;
+                     }
+            }
+            button{
+                padding: .74rem 0px .74rem 0px;
+                width: 120px;
+                max-width: 100%;
+                height: auto;
+                background-color: $button-color-submit;
+                color: #111;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-family:"Roboto Condensed", sans-serif;
+                &:active{
+                    box-shadow: none;
+                }
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+                .validemail{
+                       height: 25px;
+                        color: #fff;
+                        font-size: 1.1rem;
+                        letter-spacing: 1.5px;
+                        line-height: 2;
+                        opacity: 0;
+                    transition: .5s;
+                    &.show{
+                        opacity: 1
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.getintouch{
+    /*Apply Animation fade out when page open */
+        @extend %fadeOutSections;
+    &.wow{
+    animation-name: wow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+   animation-fill-mode: both;
+    }
+    margin-top: 15rem;
+    &__content{
+        h2{
+            /*Make Component h2 to be Grouped in all page with other h2*/
+            @extend %h2;
+          
+        }
+    }
+    &__form{
+        form{
+            .control{
+                @include min(1200){
+                    width: 555px;
+                }
+                @include media(992,1199){
+                    width: 455px;
+                }
+                @include media(768,991){
+                    width: 345px;
+                }
+                max-width: 100%;
+                margin: auto;
+                @include max(767){
+                    width: 100%;
+                }
+                &:nth-child(1){
+                    .validName{
+                      letter-spacing: 2px;
+                            color: #2d3436;
+                           height: 15px; 
+                        font-weight: 500;
+                         font-family: "Open Sans", sans-serif;
+                    }
+                }
+                &:nth-child(2){
+                    input{
+                        margin:0px auto;
+                        
+                    }
+                     .validmail2{
+                            letter-spacing: 2px;
+                            color: #2d3436;
+                           height: 15px;
+                         font-weight: 500;
+                         font-family: "Open Sans", sans-serif;
+                    }
+                }
+               
+                   input{
+            /*Grouping with other input that in subscribe section to be common with most style */
+                @extend %input;
+              font-size: 1.1rem;
+                width: 100%;
+                padding: .75rem 0px .75rem 1rem;
+               
+                &::placeholder{
+                    @extend %placeholder;
+                    color: rgba(#555,.8);
+                }
+            }
+                
+                textarea{
+                    @extend %input;
+                    height: 120px;
+                    padding-left: 1rem;
+                  
+                    &::placeholder{
+                        @extend %placeholder;
+                          color: rgba(#555,.8);
+                    }
+                }
+                button{
+                  
+                    background-color: $button-backgroundcolor-submit;
+                    color: $white;
+                   font-size: 1.1rem;
+                    width: 100%;
+                    padding: .75rem 0;
+                    height: auto;
+                    letter-spacing: 2px;
+                    max-width: 100%;
+                    border-radius: 2px;
+                    transition: .3s;
+                    font-family: "Roboto Condensed", sans-serif;
+                    margin-top: 10px;
+                    &:hover{
+                        background-color: #111;
+                    }
+                    &:focus{
+                        background-color: #111;
+                        box-shadow: none;
+                    }
+                    &:active{
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

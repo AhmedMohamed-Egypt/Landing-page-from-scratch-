@@ -1,0 +1,227 @@
+.footer{
+        @extend %fadeOutSections;
+    padding-top: 6rem ;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: $black;
+    margin-top: 14rem;
+    color: $white;
+    font-size: 1.2rem;
+     font-family: "Open Sans", sans-serif;
+    position: relative;
+    >.container{
+        padding-bottom: 10rem;
+         >.columns{
+        display: flex;
+             @include max(767){
+                 flex-direction: column;
+             }
+    }
+    }
+   
+    .column{
+        width: 25%;
+        @include max(767){
+            width: 100%;
+        }
+    }
+    
+    a{
+         color: #aaa;
+        transition: .2s;
+        &:hover{
+            color: $white;
+        }
+    }
+    @for $i from 1 through 4{
+                &__part#{$i}{
+         @include max(767){
+            margin-bottom: 5rem;
+        }
+        h5{
+            @extend %h5;
+            @include max(767){
+                width: 100%;
+            }
+           
+        }
+     
+    }
+    }
+    &__part1{
+       
+           p{
+            font-family:"Open Sans", sans-serif;
+            font-size: 1.2rem;
+            max-width: 270px;
+               @include max(767){
+                   max-width: 100%;
+               }
+            
+            line-height: 1.8;
+         &:last-child{
+                margin: 0;
+            }
+            &:nth-of-type(3){
+                margin: .5rem 0;
+            }
+    &:nth-of-type(2){
+        margin: 2rem 0;
+    }
+                 span{
+                   
+                    
+                display: inline-block;
+            }
+          
+             
+        }
+    }
+      &__part2{
+          
+          ul{
+              li{
+                @extend %lifooter;
+                  
+                  span{
+                      width: 50px;
+                      display: inline-block;
+                  }
+                
+                  a{
+                      &::before{
+                           @extend %beforelinkfooter;
+                      }
+                  }
+              }
+          }
+    }
+    &__part3{
+        ul{
+            li{
+        @extend %lifooter;
+                a{
+                        &::before{
+                         @extend %beforelinkfooter;
+                      }
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    &__part4{
+        .popularposts{
+            @for $i from 1 through 2 {
+                &__link#{$i}{
+               
+                @extend %popularlink;
+                    >a{
+                        width:60px;
+                        @include max(767){
+                            width: auto;
+                        }
+                    }
+                    
+                    .designer{
+                        line-height: 1.7;
+                        width: 195px;
+                        @include media(992,1199){
+                            width: 140px;
+                        }
+                        @include media(768,991){
+                            width: 85px;
+                        }
+                        span{
+                            display: block;
+                            
+                        }
+                    }
+                    img{
+                       
+                    }
+            } 
+            }
+            &__link1{
+                margin-bottom: 2rem;
+            }
+            &__link2{
+               
+               
+            }
+           
+        }
+    }
+    &__copyright{
+        @include min(1200){
+             border-top:1px solid #fff;
+        }
+          border-top:1px solid #202020;
+        padding: 2rem 0;
+        &--main{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            @include max(767){
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        &__details{
+              @include max(767){
+         margin-bottom: 15px;
+        }
+            span,a,p{
+                display: inline-block;
+            }
+            >span{
+                margin: 0 .5rem;
+                letter-spacing: 2px;
+                
+            }
+            p{
+                margin-left: .5rem;
+                font-family:"Roboto Condensed", sans-serif;
+                letter-spacing: 2px;
+                position: relative;
+                left: -10px;
+            }
+            a{
+                letter-spacing: 2px;
+                span{
+                    color: #fff;
+                    
+                    position: relative;
+                    left: -5px;
+                }
+            }
+        }
+         &__social{
+        @extend %social;
+             margin: 0;
+             width: 80px;
+    }
+        
+    }
+   
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
